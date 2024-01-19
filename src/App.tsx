@@ -5,6 +5,7 @@ import './App.css';
 import { getEtherBalance, getTokenBalance } from './utils/web3';
 import { createToken, initDB, readTokens } from './apis/db';
 import { IToken } from './entities/token';
+import { ConnectWallet } from './components/ConnectWallet';
 
 initDB();
 
@@ -67,6 +68,7 @@ function App() {
 
   return (
     <>
+      <ConnectWallet />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
